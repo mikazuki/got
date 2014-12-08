@@ -1,4 +1,4 @@
-package got
+package conf
 
 import (
 	"io/ioutil"
@@ -10,7 +10,7 @@ import (
 // global config
 
 type Got struct {
-	Handlers handlersConf
+	Handlers Handlers
 }
 
 type Handlers struct {
@@ -34,7 +34,7 @@ type Package struct {
 	UpdateActions  []Action `yaml:"update"`
 }
 
-type actionConf struct {
+type Action struct {
 	Link    map[string]string
 	Command string `yaml:"cmd"`
 }
